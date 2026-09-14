@@ -1,0 +1,17 @@
+STATUS	CODE	BYTES	URL	TYPE
+HAVE	200	317	https://doc.openlux.ai/api/docs/portal/branding	application/json
+HAVE	200	2837	https://doc.openlux.ai/api/docs/public/catalog?locale=en-US	application/json
+HAVE	200	877	https://doc.openlux.ai/api/docs/public/specs/meta	application/json
+HAVE	200	10584	https://doc.openlux.ai/assets/claude-6z6zLTm0.png	image/png
+HAVE	200	16120	https://doc.openlux.ai/assets/deepseek-YRcMyCv3.png	image/png
+HAVE	200	22620	https://doc.openlux.ai/assets/gemini-Bn8pQ3lx.png	image/png
+HAVE	200	41686	https://doc.openlux.ai/assets/index-CFDu1WXH.css	text/css
+HAVE	200	738178	https://doc.openlux.ai/assets/index-DnuzNlT9.js	application/javascript
+HAVE	200	24069	https://doc.openlux.ai/assets/kling-Ch2zdlgw.png	image/png
+HAVE	200	15891	https://doc.openlux.ai/assets/openai-BOlHVTlD.png	image/png
+HAVE	200	12018	https://doc.openlux.ai/assets/plus-jakarta-sans-latin-400-normal-Dhut76fR.woff2	font/woff2
+HAVE	200	12514	https://doc.openlux.ai/assets/plus-jakarta-sans-latin-500-normal-Bf-nb4oT.woff2	font/woff2
+HAVE	200	12390	https://doc.openlux.ai/assets/plus-jakarta-sans-latin-600-normal-DLTa1BUW.woff2	font/woff2
+HAVE	200	12446	https://doc.openlux.ai/assets/plus-jakarta-sans-latin-700-normal-CfpNZvy6.woff2	font/woff2
+HAVE	200	1105	https://doc.openlux.ai/en	text/html
+HAVE	404	611	https://doc.openlux.ai/favicon.ico	text/html

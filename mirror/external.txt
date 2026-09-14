@@ -1,0 +1,30 @@
+# Registered non-file / intentionally external references for the private offline mirror.
+# Format: DECISION | target | reason
+NOTFILE | https://doc.openlux.ai/tmp/upload/image.png | Scalar example string; origin returns HTTP 404 and it is not a site asset.
+NOTFILE | https://doc.openlux.ai/home/user/.config/app.json | Scalar example string; captured response is the origin 404 template, not a real asset.
+NOTFILE | https://doc.openlux.ai/home/user/.config | Scalar example directory-like example string; not a site asset.
+NOTFILE | https://cdn.jsdelivr.net/scalar.json | Scalar runtime probe endpoint; origin returns HTTP 400 and is not a required standalone asset.
+NOTFILE | https://cdn.jsdelivr.net/npm/@scalar/api-reference | Redirect alias; served through the mirrored @latest standalone bundle entry.
+CONTENT | https://platform.openai.com/* | External documentation links embedded in API examples; intentionally not crawled.
+CONTENT | https://replicate.com/* | External documentation/model links embedded in API examples; intentionally not crawled.
+CONTENT | https://fal.ai/* | External model links embedded in API examples; intentionally not crawled.
+CONTENT | https://ai.google.dev/* | External documentation links embedded in API examples; intentionally not crawled.
+CONTENT | https://example.com/* | Placeholder URLs inside API examples, not site assets.
+CONTENT | https://queue.fal.run/* | Runtime/example URLs inside API examples, not required static assets.
+CONTENT | https://api.replicate.com/* | Runtime/example URLs inside API examples, not required static assets.
+CONTENT | https://stream.replicate.com/* | Runtime/example URLs inside API examples, not required static assets.
+CONTENT | https://replicate.delivery/* | Example media URLs embedded in API examples; not required for the portal shell.
+CONTENT | https://filesystem.site/* | Example media URLs embedded in API examples; not required for the portal shell.
+CONTENT | https://ark-project.tos-cn-beijing.volces.com/* | Example media URLs embedded in API examples; not required for the portal shell.
+CONTENT | https://storage.googleapis.com/* | Example media URLs embedded in API examples; not required for the portal shell.
+CONTENT | https://www.volcengine.com/* | External documentation links embedded in API examples; intentionally not crawled.
+CONTENT | https://*.ingest.sentry.io/* | Telemetry DSNs / endpoints; intentionally not crawled in offline mode.
+# Registered Scalar example paths intentionally absent from the mirror. They are exact NOTFILE entries.
+NOTFILE | https://doc.openlux.ai/home/user/documents/report.pdf | Scalar example string; origin returns the 404 HTML template and it is not a site asset.
+NOTFILE | https://doc.openlux.ai/var/log/app/server.log | Scalar example string; origin returns the 404 HTML template and it is not a site asset.
+NOTFILE | https://doc.openlux.ai/opt/data/backup.tar.gz | Scalar example string; origin returns the 404 HTML template and it is not a site asset.
+NOTFILE | https://doc.openlux.ai/home/user/projects/app/src/index.ts | Scalar example string; origin returns the 404 HTML template and it is not a site asset.
+NOTFILE | https://doc.openlux.ai/etc/config/settings.yml | Scalar example string; origin returns the 404 HTML template and it is not a site asset.
+NOTFILE | https://doc.openlux.ai/usr/local/bin/script.sh | Scalar example string; origin returns the 404 HTML template and it is not a site asset.
+NOTFILE | https://doc.openlux.ai/home/user/downloads/archive.zip | Scalar example string; origin returns the 404 HTML template and it is not a site asset.
+NOTFILE | https://doc.openlux.ai/var/www/html/index.html | Scalar example string; origin returns the 404 HTML template and it is not a site asset.

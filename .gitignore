@@ -1,0 +1,14 @@
+/node_modules/
+/.vercel/
+/output/
+/probe/
+/skills/
+/docs/
+/REBUILD_PLAN.md
+*.log
+*.log.err
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db

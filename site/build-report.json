@@ -1,0 +1,53 @@
+{
+  "config": ".\\scripts\\shell-config.mjs",
+  "pages": [
+    {
+      "rel": "index.html",
+      "mirrorBytes": 1072,
+      "builtBytes": 1454,
+      "transforms": {
+        "T-NOINDEX": 1
+      }
+    },
+    {
+      "rel": "en/index.html",
+      "mirrorBytes": 984,
+      "builtBytes": 1366,
+      "transforms": {
+        "T-NOINDEX": 1
+      }
+    },
+    {
+      "rel": "explore/index.html",
+      "mirrorBytes": 984,
+      "builtBytes": 1366,
+      "transforms": {
+        "T-NOINDEX": 1
+      }
+    },
+    {
+      "rel": "en/explore/index.html",
+      "mirrorBytes": 984,
+      "builtBytes": 1366,
+      "transforms": {
+        "T-NOINDEX": 1
+      }
+    },
+    {
+      "rel": "reference/kling/index.html",
+      "mirrorBytes": 984,
+      "builtBytes": 1366,
+      "transforms": {
+        "T-NOINDEX": 1
+      }
+    },
+    {
+      "rel": "en/reference/kling/index.html",
+      "mirrorBytes": 984,
+      "builtBytes": 1366,
+      "transforms": {
+        "T-NOINDEX": 1
+      }
+    }
+  ]
+}

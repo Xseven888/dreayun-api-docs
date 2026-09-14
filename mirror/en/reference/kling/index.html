@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 静态占位：品牌真实标题由 PortalBrandingProvider 在拉到 branding 后立即覆盖
+         （含云雾域），避免代理域首屏闪现「云雾」字样（Docs-Portal-Tenant-Auth.md §4.5）。 -->
+    <title>API 开发文档</title>
+    <script>
+      (function () {
+        var k = 'yunwu-docs-portal-theme';
+        var t = localStorage.getItem(k);
+        if (t !== 'light' && t !== 'dark') {
+          t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', t);
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/index-DnuzNlT9.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CFDu1WXH.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
