@@ -2,11 +2,17 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
   "functions": {
-    "server.ts": {
+    "api/server.js": {
       "includeFiles": "{site,mirror}/**",
       "maxDuration": 60
     }
   },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/api/server"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",

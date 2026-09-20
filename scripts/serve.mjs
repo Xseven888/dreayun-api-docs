@@ -810,7 +810,7 @@ function requestLocale(url) {
 
 const RESPONSE_REWRITE = BRAND_REWRITE || EXT_HOSTS.length > 0 || ORIGIN_HOSTS.length > 0;
 
-const server = http.createServer(async (req, res) => {
+export async function handleRequest(req, res) {
   try {
     const url = new URL(req.url, `http://${req.headers.host || "localhost"}`);
 
@@ -947,7 +947,11 @@ const server = http.createServer(async (req, res) => {
     res.writeHead(500, { "content-type": "text/plain" });
     res.end(String(e));
   }
-});
+}
+
+export default handleRequest;
+
+const server = http.createServer(handleRequest);
 
 // A taken port is a hard stop, not a nudge to the next free one: the whole
 // point of the allocation is that the other scripts can find this server where
@@ -963,17 +967,19 @@ server.on("error", async (e) => {
   ]);
 });
 
-server.listen(PORT, HOST, () => {
-  console.log(`serving ${ROOT}  [side ${IDENTITY.side.toUpperCase()}]`);
-  console.log(`  http://${HOST}:${PORT}/`);
-  console.log(`  port ${labelPort(PORT)}`);
-  console.log(`  identity ${IDENTITY.token}  (GET ${IDENTITY_PATH})`);
-  console.log(`  ${describePolicy(QUERY_POLICY)}`);
-  if (ORIGIN_HOSTS.length) console.log(`  origin hosts -> root-relative: ${ORIGIN_HOSTS.join(", ")}`);
-  if (EXT_HOSTS.length) console.log(`  ext hosts: ${EXT_HOSTS.join(", ")}`);
-  if (REDIRECTS.size) console.log(`  replaying ${REDIRECTS.size} redirects from ledger`);
-  if (selfRedirects) {
-    console.log(`  skipped ${selfRedirects} ledger redirect(s) that localize to themselves (would loop)`);
-  }
-});
+if (!process.env.VERCEL) {
+  server.listen(PORT, HOST, () => {
+    console.log(`serving ${ROOT}  [side ${IDENTITY.side.toUpperCase()}]`);
+    console.log(`  http://${HOST}:${PORT}/`);
+    console.log(`  port ${labelPort(PORT)}`);
+    console.log(`  identity ${IDENTITY.token}  (GET ${IDENTITY_PATH})`);
+    console.log(`  ${describePolicy(QUERY_POLICY)}`);
+    if (ORIGIN_HOSTS.length) console.log(`  origin hosts -> root-relative: ${ORIGIN_HOSTS.join(", ")}`);
+    if (EXT_HOSTS.length) console.log(`  ext hosts: ${EXT_HOSTS.join(", ")}`);
+    if (REDIRECTS.size) console.log(`  replaying ${REDIRECTS.size} redirects from ledger`);
+    if (selfRedirects) {
+      console.log(`  skipped ${selfRedirects} ledger redirect(s) that localize to themselves (would loop)`);
+    }
+  });
+}
 
