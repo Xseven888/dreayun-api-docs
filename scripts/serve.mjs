@@ -897,7 +897,7 @@ export async function handleRequest(req, res) {
 
     const ext = path.extname(hit.file).toLowerCase();
     const headers = {
-      "content-type": RECORDED_TYPE.get(hit.file) || MIME[ext] || "application/octet-stream",
+      "content-type": url.pathname.startsWith("/api/") ? "application/json; charset=utf-8" : RECORDED_TYPE.get(hit.file) || MIME[ext] || "application/octet-stream",
       "cache-control": "no-cache",
       "access-control-allow-origin": "*",
     };
