@@ -1,8 +1,7 @@
 # 即云API 文档站（DreaYunAPI Docs）
 
-这是即云API文档站的部署工程。中文品牌显示为“即云API”，英文品牌显示为 `DreaYunAPI`，文档中的 API 地址为 `https://api.dreayun.com`。
+这是即云API文档站的部署工程。中文品牌显示为“即云API”，英文品牌显示为 `DreaYunAPI`，即云 API 地址为 `https://api.dreayun.com`。
 
-> 当前工程默认通过 `X-Robots-Tag: noindex, nofollow` 禁止搜索引擎收录。建议先使用 GitHub 私有仓库和 Vercel 预览部署进行验收。
 
 ## 需要提交到 GitHub 的内容
 
